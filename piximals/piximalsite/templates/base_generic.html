@@ -8,8 +8,23 @@
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script type="text/javascript" src="{% static 'js/jquery-3.5.1.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/my_js.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
 <body>
-  <div>{% block content %}{% endblock %}</div>
+  <div class="site-container container col-lg-11 center-block">
+    <div class="site-name">Piximals</div>
+    <nav class="navbar">
+      <a href="">Link 1</a>
+      <a href="">Link 2</a>
+      <a href="">Link 3</a>
+      <a href="">Link 4</a>
+      <a href="">Link 5</a>
+    </nav>
+    <div class="base-content-container">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
 </body>
 </html>
